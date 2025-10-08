@@ -60,7 +60,7 @@ This is a static front-end project and requires no complex setup. To run it loca
 
 **Abhishek Gidd**
 
-* **LinkedIn:** [https://www.linkedin.com/in/abhishek-b-gidd/](https://www.linkedin.com/in/abhishek-b-gidd/)
+* **LinkedIn:** [linkedin.com/abhishek-b-gidd/](https://www.linkedin.com/in/abhishek-b-gidd/)
 * **GitHub:** [@Abhigidd](https://github.com/Abhigidd)
 * **Email:** [abhishekgidd@gmail.com](mailto:abhishekgidd@gmail.com)
 
