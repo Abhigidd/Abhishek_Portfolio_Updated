@@ -735,7 +735,7 @@
       </section>
 
       <footer class="text-center py-8 text-gray-500">
-        <p>&copy; 2024 Abhishek Gidd. All rights reserved.</p>
+        <p>&copy; 2024 Abhishek Gidd &#x1F5A4; . All rights reserved.</p>
       </footer>
     </div>
 
@@ -804,19 +804,27 @@
           });
         });
 
-        // --- Animated Subtitle Logic ---
+        // --- Animated Subtitle Logic for multiple lines ---
         const subtitleEl = document.getElementById("animated-subtitle");
-        const subtitleText = "Full Stack Developer";
+        const subtitleLines = ["Full Stack", "Developer"];
         if (subtitleEl) {
-          subtitleEl.innerHTML = subtitleText
-            .split("")
-            .map(
-              (char, index) =>
-                `<span style="animation-delay: ${index * 0.1}s">${
-                  char === " " ? "&nbsp;" : char
-                }</span>`
-            )
-            .join("");
+          let charCount = 0;
+          const linesHtml = subtitleLines
+            .map((line) => {
+              const lineHtml = line
+                .split("")
+                .map((char) => {
+                  const span = `<span style="animation-delay: ${
+                    charCount * 0.1
+                  }s">${char === " " ? "&nbsp;" : char}</span>`;
+                  charCount++;
+                  return span;
+                })
+                .join("");
+              return lineHtml;
+            })
+            .join("<br>");
+          subtitleEl.innerHTML = linesHtml;
         }
 
         // --- Three.js Scene ---
